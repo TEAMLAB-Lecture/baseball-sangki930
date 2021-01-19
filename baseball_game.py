@@ -274,8 +274,8 @@ def main():
     # 위의 코드를 포함하여 자유로운 수정이 가능함
     
     while True:
-        user_input=int(input('Input guess number : '))
-        if(user_input==0):
+        user_input=input('Input guess number : ')
+        if(user_input=='0'):
             break
         if is_validated_number(user_input)==False:
             print('Wrong Input, Input again')

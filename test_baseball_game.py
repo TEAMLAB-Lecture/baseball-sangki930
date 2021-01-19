@@ -3,7 +3,8 @@
 import unittest
 import baseball_game as bg
 
-from mock import patch
+# from mock import patch
+from unittest.mock import patch
 from io import StringIO
 
 
@@ -159,6 +160,7 @@ class TestBaseballGame(unittest.TestCase):
                         self.assertTrue(
                                 "WRONG INPUT" in console[i + 2].upper())
                     elif int(input_list[i]) == int(target_number):
+                        
                         self.assertIn(str(3), console[i + 2].upper())
                         self.assertIn(str(0), console[i + 2].upper())
                         self.assertIn(

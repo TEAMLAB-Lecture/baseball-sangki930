@@ -274,7 +274,7 @@ def main():
     # 위의 코드를 포함하여 자유로운 수정이 가능함
     
     while True:
-        user_input=input('Input guess number : ')
+        user_input = input('Input guess number : ')
         if(user_input=='0'):
             break
         if is_validated_number(user_input)==False:
@@ -285,13 +285,13 @@ def main():
             if strike==3 and ball==0:
                 a=input('You win, one more(Y/N)?')
                 if(is_yes(a) or is_no(a)):
-                    break
-                else:
                     continue
+                else:
+                    break
             else:
                 print(f'Strikes : {strike} , Balls : {ball}')
                 continue
-
+    
     # ==================================
     print("Thank you for using this program")
     print("End of the Game")

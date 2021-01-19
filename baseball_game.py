@@ -292,6 +292,7 @@ def main():
             
             if exit:
                 break
+            exit_yes=False
             while True:
                 strike,ball=get_strikes_or_ball(user_input,random_number)
                 
@@ -302,6 +303,7 @@ def main():
                             exit=True
                             break
                         elif is_yes(a):
+                            exit_yes=True
                             break
                         else:
                             print('Wrong Input, Input again')
@@ -310,7 +312,7 @@ def main():
                 else:
                     print(f'Strikes : {strike} , Balls : {ball}')
                     continue
-                if exit:
+                if exit or exit_yes:
                     break
             if exit:
                 break

@@ -259,7 +259,7 @@ def is_no(one_more_input):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
     s=one_more_input.upper()
-    if s in ['NO','O']:
+    if s in ['NO','N']:
         return True
     # ==================================
     return False

@@ -269,56 +269,42 @@ def main():
     print("Play Baseball")
     user_input = '999'
     
+    
     # ===Modify codes below=============
     # 위의 코드를 포함하여 자유로운 수정이 가능함
+    
     while True:
-        
+        random_number = str(get_not_duplicated_three_digit_number())
+        print("Random Number is : ", random_number)
+        is_zero=False
         exit=False
         while True:
-            random_number = str(get_not_duplicated_three_digit_number())
-            print("Random Number is : ", random_number)
-            
+            user_input=input('Input guess number : ')
+            if is_validated_number(user_input):
+                break
+            else:
+                if user_input=='0':
+                    is_zero=True
+                    break
+                print('Wrong Input, Input again')
+        if is_zero:
+            break
+        strikes,balls=get_strikes_or_ball(user_input,random_number)
+        cmd=''
+        if strikes==3 and balls==0:
             while True:
-                user_input = input('Input guess number : ')
-                
-                if is_validated_number(user_input)==False:
-                    if(user_input=='0'):
-                        exit=True
-                        break
+                cmd=input('You win, one more(Y/N)?')
+                if is_yes(cmd):
+                    break
+                elif is_no(cmd):
+                    exit=True
+                    break
+                else:
                     print('Wrong Input, Input again')
-                    continue
-                else:
-                    break
-            
-            if exit:
-                break
-            exit_yes=False
-            while True:
-                strike,ball=get_strikes_or_ball(user_input,random_number)
-                
-                if strike==3 and ball==0:
-                    while True:
-                        a=input('You win, one more(Y/N)?')
-                        if is_no(a):
-                            exit=True
-                            break
-                        elif is_yes(a):
-                            exit_yes=True
-                            break
-                        else:
-                            print('Wrong Input, Input again')
-                            continue
-                    
-                else:
-                    print(f'Strikes : {strike} , Balls : {ball}')
-                    continue
-                if exit or exit_yes:
-                    break
-            if exit:
-                break
-        
         if exit:
             break
+            
+
     # ====
     # ==================================
     print("Thank you for using this program")

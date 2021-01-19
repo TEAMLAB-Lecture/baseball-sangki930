@@ -310,6 +310,8 @@ def main():
                 else:
                     print(f'Strikes : {strike} , Balls : {ball}')
                     continue
+                if exit:
+                    break
             if exit:
                 break
         

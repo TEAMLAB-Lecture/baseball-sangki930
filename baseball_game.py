@@ -282,11 +282,19 @@ def main():
             continue
         else:
             strike,ball=get_strikes_or_ball(user_input,random_number)
+            exit=False
             if strike==3 and ball==0:
-                a=input('You win, one more(Y/N)?')
-                if(is_yes(a) or is_no(a)):
-                    continue
-                else:
+                while True:
+                    a=input('You win, one more(Y/N)?')
+                    if is_no(a):
+                        exit=True
+                        break
+                    elif is_yes(a):
+                        break
+                    else:
+                        print('Wrong Input, Input again')
+                        continue
+                if exit:
                     break
             else:
                 print(f'Strikes : {strike} , Balls : {ball}')

@@ -62,7 +62,7 @@ def is_between_100_and_999(user_input_number):
         return False
 
     # ==================================
-    return num
+    return True
 
 
 def is_duplicated_number(three_digit):

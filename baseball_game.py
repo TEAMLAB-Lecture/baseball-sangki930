@@ -282,11 +282,12 @@ def main():
                 user_input = input('Input guess number : ')
                 
                 if is_validated_number(user_input)==False:
+                    if(user_input=='0'):
+                        exit=True
+                        break
                     print('Wrong Input, Input again')
                     continue
                 else:
-                    if(user_input=='0'):
-                        exit=True
                     break
             
             if exit:

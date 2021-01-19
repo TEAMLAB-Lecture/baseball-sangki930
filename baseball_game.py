@@ -304,7 +304,7 @@ def main():
                 else:
                     print('Wrong Input, Input again')
         else:
-            print(f'Strikes : {strikes}, Balls : {balls}')
+            print(f'Strikes : {strikes} , Balls : {balls}')
             is_end=True
         if exit:
             break

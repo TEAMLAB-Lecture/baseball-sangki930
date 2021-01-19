@@ -182,8 +182,6 @@ def get_strikes_or_ball(user_input_number, random_number):
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
     strike=0
     ball=0
-    # if user_input_number==random_number:
-    #     return [3,0]
     su=str(user_input_number)
     sr=str(random_number)
     for i in range(3):

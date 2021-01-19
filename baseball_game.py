@@ -285,13 +285,14 @@ def main():
                 if user_input=='0':
                     is_zero=True
                     break
-                # print('Wrong Input, Input again')
-                print('is this?')
+                print('Wrong Input, Input again')
+                # print('is this?')
         if is_zero:
             break
         strikes,balls=get_strikes_or_ball(user_input,random_number)
         cmd=''
         if strikes==3 and balls==0:
+            print(f'Strikes : {strikes} , Balls : {balls}')
             while True:
                 cmd=input('You win, one more(Y/N)?')
                 if is_yes(cmd):
@@ -301,8 +302,8 @@ def main():
                     exit=True
                     break
                 else:
-                    # print('Wrong Input, Input again')
-                    print('TTT')
+                    print('Wrong Input, Input again')
+                    # print('TTT')
         else:
             print(f'Strikes : {strikes} , Balls : {balls}')
             is_end=True

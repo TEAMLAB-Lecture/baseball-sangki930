@@ -301,6 +301,8 @@ def main():
                     break
                 else:
                     print('Wrong Input, Input again')
+        else:
+            print(f'Strikes : {strikes}, Balls : {balls}')
         if exit:
             break
             

@@ -285,7 +285,8 @@ def main():
                 if user_input=='0':
                     is_zero=True
                     break
-                print('Wrong Input, Input again')
+                # print('Wrong Input, Input again')
+                print('is this?')
         if is_zero:
             break
         strikes,balls=get_strikes_or_ball(user_input,random_number)

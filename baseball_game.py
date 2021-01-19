@@ -300,7 +300,8 @@ def main():
                     exit=True
                     break
                 else:
-                    print('Wrong Input, Input again')
+                    # print('Wrong Input, Input again')
+                    print('TTT')
         else:
             print(f'Strikes : {strikes} , Balls : {balls}')
             is_end=True

@@ -57,7 +57,7 @@ def is_between_100_and_999(user_input_number):
     # '''
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
-    num=int(user_input_number.isdigit)
+    num=int(user_input_number)
     if num<100 or num>999:
         return False
 
